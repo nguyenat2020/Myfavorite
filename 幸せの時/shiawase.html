@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>幸せの時</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+<style>
+    .content {
+  max-width: 1300px;
+  margin: auto;
+}
+    body {
+        background-image: url('shiawase-min.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 70% 100%;
+        background-position: center;
+    }
+    p {
+        font: 22px 'Kaisei Decol', serif;
+        color: black;
+    }
+    .shiawase {
+        font-size: 60px;
+        color: red;
+    }
+    .col-wrap {
+    display: table; 
+    width: 100%; 
+    margin-top: 100px;
+}
+
+.col {
+    display: table-cell;
+    padding: 0.5rem;
+
+}
+.col:nth-child(even){
+    background-color:lightseagreen;
+    opacity:0.6;
+    width: 40%;
+}
+.col:nth-child(odd){
+    background-color:lightcoral;
+    opacity:0.6;
+}
+
+</style>
+</head>
+<body>
+<div class="content">
+    <div class="col-wrap">
+        <div class="col">
+    
+    <h1><span class="shiawase">幸</span>せの時間 - <span class="shiawase"></span>Hạnh phúc mơ hồ</h1>
+    
+    <p>
+        Khuông mặt em êm đềm, mà phảng phất nét buồn của bóng chiều tà <br>
+        Trong căn phòng đã tắt đèn, <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp tôi lặng lẽ ngắm nhìn phố xá rực rỡ bên ngoài qua khung cửa sổ. <br>
+        Chỉ cần một tiếng gió rít khẽ, <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp hay tiếng chuông gió nhẹ vang vọng trong không trung <br>
+        Cũng đủ để đánh thức giấc ngủ nồng nàng của đôi ta. <br><br>
+        ....Vẫn tin rằng, đến một lúc nào đó sẽ tìm thấy được hạnh phúc !
+    </p>
+    <p>
+        Mái tóc dài đơn sơ buộc nhẹ, <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp khẽ tôn lên một thân ảnh gió bụi hồng trần. <br>
+        Thời gian tạo nên bao hồi ức tươi đẹp, <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cũng chất chồng nhiều gánh nặng trên vai.<br>
+        Chỉ có thể tiếp tục bước đi ... <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ... cho đến khi không còn chống đỡ nổi !<br><br>
+        ....Vẫn tin rằng, một lúc nào đó sẽ đến được bến bờ hạnh phúc !
+    </p></div>
+    <div class="col">
+        <audio id="myVideo" controls>
+            <source src="ShiawaseNoToki.mp3">
+        </audio>
+        <br><br><br>
+        <p id="seg"></p>
+        <p id="lyric">
+            差し込む赤い夕陽に影絵のような君<br>
+            灯りを消した部屋から僕は外を見ている<br>
+            小さく響く風鈴　寝息のような風の音<br>
+            穏やかな眠りをさましてゆく<br><br>
+            いつか見つけられると信じてきた<br>
+            幸せの時間を見た気がした<br><br>
+            長い髪　束ねただけ　無造作なかたちは<br>
+            暮らしの汚れた意味を　優しく包んでいる<br>
+            時が思い出を作り　時がそれだけ重くなって<br>
+            ささえきれなくなるまで　歩くのか<br><br>
+            いつかみつけられると信じてきた<br>
+            幸せの時間を見た気がした
+        </p>
+    </div>
+    </div>
+        <br>
+        <a href="http://369605242732-profile-vn.s3-website-ap-northeast-1.amazonaws.com/" target="_blank"> © 2023 Copyright: GreatExpectations7760 </a>
+    </div>
+
+<script>
+    document.getElementById("lyric").style.display = "none";
+    var i = 0;
+    var txt = "差し込む赤い夕陽に影絵のような君\n灯りを消した部屋から僕は外を見ている\n小さく響く風鈴　寝息のような風の音\n穏やかな眠りをさましてゆく\n\nいつか見つけられると信じてきた\n幸せの時間を見た気がした\n\n\d長い髪　束ねただけ　無造作なかたちは\n暮らしの汚れた意味を　優しく包んでいる\n時が思い出を作り　時がそれだけ重くなって\nささえきれなくなるまで　歩くのか\n\nいつかみつけられると信じてきた\n幸せの時間を見た気がした";
+    var speed = 600;
+    let vid = document.getElementById("myVideo"); 
+    vid.onplaying = function() {
+        setTimeout(typeWriter, 10000);
+    function typeWriter() {
+      if (i < txt.length) {
+        if(txt.charAt(i) == '\n') {
+            document.getElementById("seg").innerHTML += "</br>";
+            setTimeout(typeWriter, speed);
+        } else if(txt.charAt(i) == '\d') {
+            setTimeout(typeWriter, 15500);
+        } else {
+            document.getElementById("seg").innerHTML += txt.charAt(i);
+            setTimeout(typeWriter, speed);
+        }
+        i++;
+      }
+    }
+};
+
+vid.onpause = function() {
+    document.getElementById("lyric").style.display = "block";
+    i = txt.length;
+    document.getElementById("seg").innerHTML = "";
+  }
+</script>
+</div>
+
+</body>
+</html>
