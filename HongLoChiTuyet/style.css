@@ -1,0 +1,27 @@
+canvas{
+z-index: 2;
+}
+
+html {
+    background-image: url('honglo_chay-min.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 70% 100%;
+    background-position: center;
+}
+
+p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 28px;
+    color: #9A031E;
+}
+
+.text{
+    margin-left: 400px;
+    color: #ffffff6b;
+    font-size: 28px;
+    width: 100%;
+    top: 130px;
+    position: absolute;
+    display: block;
+}

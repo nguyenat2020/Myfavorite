@@ -5,56 +5,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,200&family=Kaisei+Decol:wght@400;500&display=swap" rel="stylesheet">
-<style>
-    .content {
-  max-width: 700px;
-  margin: auto;
-}
-  body {
-      background-image: url('honglo_chay-min.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 70% 100%;
-    background-position: center;
-    }
-    p {
-      font-family: 'Be Vietnam Pro', sans-serif;
-      font-size: 28px;
-      color: #9A031E;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="content">
+
+<div class="container">
+  <canvas id="canvas"></canvas>
+  <section class="section">
+    <div class="text">
     <audio id="myVideo" controls>
         <source src="Hồng Lô Chí Tuyết.mp3">
     </audio>
-<p id="seg"></p>
-<h1>Hồng lô chí tuyết</h1>
-<p>
-  Hồng lô chí tuyết<br>
-  Lạp nguyệt chí liên<br>
-  Phi bút khả bút<br>
-  Phi ngôn khả ngôn
-</p>
-<p>
-  Tuyết trên hỏa lò hồng<br>
-  Sen nở giữa mùa đông<br>
-  Không bút nào tả siết<br>
-  Không lời chi sánh bằng
-</p>
-<p>
-  Thích ca còn ngây ngất<br>
-  Huống hồ là Lý ta !
-</p>
 
-<p>
-<i>Nhạc kịch - <br>Ngàn năm tình sử </i>
-</p>
-<script>
+    <h1>Hồng lô chí tuyết</h1>
+    <p>
+      Hồng lô chí tuyết<br>
+      Lạp nguyệt chí liên<br>
+      Phi bút khả bút<br>
+      Phi ngôn khả ngôn
+    </p>
+    <p>
+      Tuyết trên hỏa lò hồng<br>
+      Sen nở giữa mùa đông<br>
+      Không bút nào tả siết<br>
+      Không lời chi sánh bằng
+    </p>
+    <p>
+      Thích ca còn ngây ngất<br>
+      Huống hồ là Lý ta !
+    </p>
 
-</script>
+    <p>
+    <i>Nhạc kịch - <br>Ngàn năm tình sử </i>
+    </p>
+  </div>
+  </section>
 </div>
-
+<script src="index.js"></script>
 </body>
 </html>
