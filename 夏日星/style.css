@@ -5,16 +5,6 @@
     font-size: 100%;
    }
 
-@media only screen and (max-device-width: 767px) {
-    /*your css code for mobile devices*/
-    body {
-        background-image: url('mars_mobile.jpg');
-    }
-    .content {
-        width: 100%;
-    }
-}
-
 body {
     background-image: url('mars.jpg');
     width: 70% 100%;

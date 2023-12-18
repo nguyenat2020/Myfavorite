@@ -1,3 +1,14 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+   }
+
+   @font-face {
+    font-family: thuphap;
+    src: url(segoepr.ttf);
+  }
+
 canvas{
 z-index: 2;
 }
@@ -11,17 +22,61 @@ html {
 }
 
 p {
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: thuphap;
     font-size: 28px;
-    color: #9A031E;
+    color: darkred;
 }
 
 .text{
+    font-family: thuphap;
     margin-left: 400px;
-    color: #ffffff6b;
-    font-size: 28px;
+    color: darkolivegreen;
+    font-size: 22px;
     width: 100%;
-    top: 130px;
+    top: 30px;
     position: absolute;
     display: block;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    /*your css code for Tablet devices */
+    body {
+        background-image: url('honglo_chay-tablet.jpg');
+        background-size: 30% 10%;
+        background-position: top;
+    }
+    .text{
+        margin: auto;
+        padding: 2px;
+        color: red;
+        background-color: #ffffff;
+        opacity: 0.6;
+        font-size: 28px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        top: 2px
+    }
+}
+
+
+@media only screen and (max-device-width: 767px) {
+    /*your css code for mobile devices*/
+    body {
+        background-image: url('honglo_chay-mobile.jpg');
+        background-size: 40% 20%;
+        background-position: scroll;
+    }
+    .text{
+        margin: auto;
+        padding: 2px;
+        color: red;
+        background-color: #ffffff;
+        opacity: 0.6;
+        font-size: 28px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        top: 2px
+    }
 }
