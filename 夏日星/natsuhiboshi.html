@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ナツヒボシ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,200&family=Kaisei+Decol:wght@400;500&display=swap" rel="stylesheet">
-<style>
-    .content {
-  max-width: 700px;
-  margin: auto;
-}
-    body {
-      background-image: url('mars.jpg');
-      background-color: whitesmoke;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 70% 100%;
-      background-position: center;
-    }
-    p {
-      font-family: 'Be Vietnam Pro', sans-serif;
-      font-size: 25px;
-      color: white;
-    }
-    h1 {
-        color: maroon;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="content">
@@ -60,39 +40,8 @@
 <p>
 ------ trích Naruto -------
 </p>
-<script>
-    document.getElementById("lyric").style.display = "none";
-    var i = 0;
-    var txt = "夏日星　何故赤い？\n昨夜悲しい夢を見た\n泣いて腫らした赤い目よ\n\n\d夏日星　何故迷？\n消えた　笑しを探している\nだから　悲しい夢を見る\n\n\d\d\d夏日星　何故赤い？\n昨夜悲しい夢を見た\n泣いて腫らした赤い目よ\n\n\d夏日星　何故迷？\n消えた　笑しを探している\nだから　悲しい夢を見る";
-    var speed = 600;
-    let vid = document.getElementById("myVideo"); 
-    vid.onplaying = function() {
-        setTimeout(typeWriter, 12000);
-    function typeWriter() {
-        console.log("1");
-      if (i < txt.length) {
-        if(txt.charAt(i) == '\n') {
-            document.getElementById("seg").innerHTML += "</br>";
-            setTimeout(typeWriter, speed);
-        } else if(txt.charAt(i) == '\d') {
-            setTimeout(typeWriter, 13800);
-        } else {
-            document.getElementById("seg").innerHTML += txt.charAt(i);
-            setTimeout(typeWriter, speed);
-        }
-        i++;
-      }
-    }
-};
 
-  vid.onpause = function() {
-    document.getElementById("lyric").style.display = "block";
-    i = txt.length;
-    document.getElementById("seg").innerHTML = "";
-  }
-
-</script>
 </div>
-
+<script src="index.js"></script>
 </body>
 </html>

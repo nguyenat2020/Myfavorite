@@ -1,0 +1,73 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+   }
+
+@media only screen and (max-device-width: 767px) {
+    /*your css code for mobile devices*/
+    body {
+        background-image: url('mars_mobile.jpg');
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+body {
+    background-image: url('mars.jpg');
+    width: 70% 100%;
+    background-size: 65%;
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 22em top;
+  } 
+
+  .content {
+    max-width: 800px;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+}
+
+h1 {
+    color: maroon;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    /*your css code for Tablet devices */
+    body {
+        background-image: url('mars_tablet.jpg');
+        background-size: 100% 100%;
+        background-position: top;
+    }
+    .content {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+
+  @media only screen and (max-device-width: 767px) {
+    /*your css code for mobile devices*/
+    body {
+        background-image: url('mars_mobile.jpg');
+        background-size: 100% 100%;
+        background-position: top;
+    }
+    .content {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
