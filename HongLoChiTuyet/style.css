@@ -70,13 +70,18 @@ p {
     .text{
         margin: auto;
         padding: 2px;
-        color: red;
+        color: darkolivegreen;
         background-color: #ffffff;
         opacity: 0.6;
-        font-size: 28px;
+        font-size: 22px;
         width: 100%;
         height: 100%;
         display: block;
         top: 2px
+    }
+    p {
+        font-family: thuphap;
+        font-size: 20px;
+        color: darkred;
     }
 }
